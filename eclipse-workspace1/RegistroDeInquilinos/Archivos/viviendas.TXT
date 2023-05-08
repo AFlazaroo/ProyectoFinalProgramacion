@@ -1,0 +1,24 @@
+***************************************
+Propiedad: #1  [Direccion:213123213]
+Tamaño: 20m2
+N de habitaciones: (SALA O COCINA O BAÑO)
+Propietario: 80
+***************************************
+Propiedad: #2  [Direccion:]
+Tamaño: ssm2
+N de habitaciones: ()
+Propietario: 
+***************************************
+Propiedad: #3  [Direccion:A]
+Tamaño: Am2
+N de habitaciones: (A)
+Propietario: A
+
+***************************************
+Propiedad: #4 [Direccion:aaa]
+Tamaño: 1m2
+N de habitaciones: (12)
+Propietario: ss
+***************************************
+
+

@@ -1,0 +1,32 @@
+***************************************
+inquilino: #1   Documento[123456]
+Nombre: lazaro
+Cuota mensual: $100Fecha de pago: 13/12/12Adios
+***************************************
+***************************************
+inquilino: #2   Documento[1SS]
+Nombre: sSs
+Cuota mensual: $SSSFecha de pago: EAdios
+***************************************
+***************************************
+inquilino: #3   Documento[Q]
+Nombre: 1|
+Cuota mensual: $8Fecha de pago: EQAdios
+***************************************
+***************************************
+inquilino: #4   Documento[93123]
+Nombre: gaSAs
+Cuota mensual: $dadasFecha de pago: hqojdsAdios
+***************************************
+***************************************
+ 
+***************************************
+
+
+***************************************
+
+***************************************
+inquilino: #5 Documento[1001052206]
+Nombre: andres
+Cuota mensual: $20000Fecha de pago: 01082003Adios
+***************************************
