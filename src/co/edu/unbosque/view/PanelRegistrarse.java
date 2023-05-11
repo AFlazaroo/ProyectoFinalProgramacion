@@ -9,118 +9,207 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class PanelRegistrarse extends JFrame{
+public class PanelRegistrarse extends JPanel{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField usuario;
+	private JTextField documento;
+	private JTextField correo;
+	private JComboBox  genero;
+	private JComboBox  programa;
+	private JComboBox  jornada;
+	private JComboBox  lugarNacimiento;
+	
+	
+	
+	
+	private JButton btnRegistrarsePanel;
+	private JButton btnAtrasPanel;
+	
 
 	public PanelRegistrarse() {
+		setLayout(null);
+		
 		initialize();
+		
+		setVisible(false);
 	}
 	
 	private void initialize() {
-		new JFrame();
+		
 		setFont(new Font("Wide Latin", Font.PLAIN, 11));
 		setBounds(100, 100, 450, 344);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setLayout(null);
+		
+		
 		
 		JLabel lblNewLabel = new JLabel("Registrate");
 		lblNewLabel.setFont(new Font("Century", Font.BOLD, 40));
 		lblNewLabel.setBounds(116, 11, 217, 49);
-		getContentPane().add(lblNewLabel);
+		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Usuario:");
 		lblNewLabel_1.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_1.setBounds(10, 76, 97, 15);
-		getContentPane().add(lblNewLabel_1);
+		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Documento de identidad:");
 		lblNewLabel_2.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_2.setBounds(10, 102, 185, 14);
-		getContentPane().add(lblNewLabel_2);
+		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Correo alternativo:");
 		lblNewLabel_3.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_3.setBounds(10, 127, 185, 14);
-		getContentPane().add(lblNewLabel_3);
+		add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Genero:");
 		lblNewLabel_4.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_4.setBounds(10, 155, 136, 14);
-		getContentPane().add(lblNewLabel_4);
+		add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Programa academico:");
 		lblNewLabel_5.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_5.setBounds(10, 185, 185, 14);
-		getContentPane().add(lblNewLabel_5);
+		add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Jornada academica:");
 		lblNewLabel_6.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_6.setBounds(10, 210, 164, 14);
-		getContentPane().add(lblNewLabel_6);
+		add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("Lugar de nacimiento:");
 		lblNewLabel_7.setFont(new Font("Artifakt Element Black", Font.PLAIN, 15));
 		lblNewLabel_7.setBounds(10, 235, 152, 14);
-		getContentPane().add(lblNewLabel_7);
+		add(lblNewLabel_7);
 		
-		textField = new JTextField();
-		textField.setBounds(275, 78, 117, 14);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		usuario = new JTextField();
+		usuario.setBounds(275, 78, 117, 14);
+		add(usuario);
+		usuario.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(275, 103, 117, 14);
-		getContentPane().add(textField_1);
+		documento = new JTextField();
+		documento.setColumns(10);
+		documento.setBounds(275, 103, 117, 14);
+		add(documento);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(275, 128, 117, 14);
-		getContentPane().add(textField_2);
+		correo = new JTextField();
+		correo.setColumns(10);
+		correo.setBounds(275, 128, 117, 14);
+		add(correo);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(275, 150, 117, 18);
-		getContentPane().add(comboBox);
+		genero = new JComboBox();
+		genero.setBounds(275, 150, 117, 18);
+		add(genero);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(275, 179, 117, 18);
-		getContentPane().add(comboBox_1);
+		programa = new JComboBox();
+		programa.setBounds(275, 179, 117, 18);
+		add(programa);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(275, 209, 117, 18);
-		getContentPane().add(comboBox_2);
+		jornada = new JComboBox();
+		jornada.setBounds(275, 209, 117, 18);
+		add(jornada);
 		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setBounds(275, 238, 117, 18);
-		getContentPane().add(comboBox_3);
+		lugarNacimiento = new JComboBox();
+		lugarNacimiento.setBounds(275, 238, 117, 18);
+		add(lugarNacimiento);
 		
-		JButton btnNewButton = new JButton("Registrarse");
-		btnNewButton.setBounds(145, 276, 164, 23);
-		getContentPane().add(btnNewButton);
+		btnRegistrarsePanel = new JButton("Registrarse");
+		btnRegistrarsePanel.setBounds(145, 276, 164, 23);
+		add(btnRegistrarsePanel);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.setBackground(new Color(0, 255, 255));
-		btnNewButton_1.setForeground(new Color(0, 0, 0));
-		btnNewButton_1.setBounds(345, 0, 89, 23);
-		getContentPane().add(btnNewButton_1);
+		btnAtrasPanel = new JButton("Atras");
+		btnAtrasPanel.setBackground(new Color(0, 255, 255));
+		btnAtrasPanel.setForeground(new Color(0, 0, 0));
+		btnAtrasPanel.setBounds(345, 0, 89, 23);
+		add(btnAtrasPanel);
 		
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon(PanelRegistrarse.class.getResource("/co/edu/unbosque/view/istockphoto-1131561170-612x612.jpg")));
-		lblNewLabel_8.setBounds(0, 0, 434, 299);
-		getContentPane().add(lblNewLabel_8);
+		lblNewLabel_8.setBounds(0, 0, 460, 400);
+		add(lblNewLabel_8);
 	}
 
+	public JTextField getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(JTextField usuario) {
+		this.usuario = usuario;
+	}
+
+	public JTextField getDocumento() {
+		return documento;
+	}
+
+	public void setDocumento(JTextField documento) {
+		this.documento = documento;
+	}
+
+	public JTextField getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(JTextField correo) {
+		this.correo = correo;
+	}
+
+	public JComboBox getGenero() {
+		return genero;
+	}
+
+	public void setGenero(JComboBox genero) {
+		this.genero = genero;
+	}
+
+	public JComboBox getPrograma() {
+		return programa;
+	}
+
+	public void setPrograma(JComboBox programa) {
+		this.programa = programa;
+	}
+
+	public JComboBox getJornada() {
+		return jornada;
+	}
+
+	public void setJornada(JComboBox jornada) {
+		this.jornada = jornada;
+	}
+
+	public JComboBox getLugarNacimiento() {
+		return lugarNacimiento;
+	}
+
+	public void setLugarNacimiento(JComboBox lugarNacimiento) {
+		this.lugarNacimiento = lugarNacimiento;
+	}
+
+	public JButton getBtnRegistrarsePanel() {
+		return btnRegistrarsePanel;
+	}
+
+	public void setBtnRegistrarsePanel(JButton btnRegistrarsePanel) {
+		this.btnRegistrarsePanel = btnRegistrarsePanel;
+	}
+
+	public JButton getBtnAtrasPanel() {
+		return btnAtrasPanel;
+	}
+
+	public void setBtnAtrasPanel(JButton btnAtrasPanel) {
+		this.btnAtrasPanel = btnAtrasPanel;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
 }
-
-
