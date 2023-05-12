@@ -5,6 +5,8 @@ package co.edu.unbosque.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import co.edu.unbosque.model.Crud;
+import co.edu.unbosque.model.Estudiantes;
 import co.edu.unbosque.view.PanelRegistrarse;
 import co.edu.unbosque.view.VentanaMain;
 import co.edu.unbosque.view.VentanaPrincipal;
@@ -16,11 +18,16 @@ public class Controller implements ActionListener {
 	private VentanaMain main;
 	
 	
+	private Crud crud;
+	private Estudiantes estudiante;
+	
 	
 	public Controller() {
 		ven = new VentanaPrincipal();
 		reg = new PanelRegistrarse();
 		main = new VentanaMain();
+		crud = new Crud();
+		estudiante = new Estudiantes(null, null, null, null, null, null, null);
 		
 		
 		initialize();
@@ -47,6 +54,9 @@ public class Controller implements ActionListener {
 	
 	
 	
+	
+	
+	
 		
 		
 	
@@ -69,6 +79,27 @@ public class Controller implements ActionListener {
 			break;
 			
 		case "BtnRegistrarsePanel":
+			 // Obtener los valores de los campos de texto
+            String usuario = main.getReg().getUsuario().getText();
+            String documento = main.getReg().getDocumento().getText();
+            String correo = main.getReg().getCorreo().getText();
+            String genero = (String) main.getReg().getGenero().getSelectedItem();
+            String programa = (String) main.getReg().getPrograma().getSelectedItem();
+            String jornada = (String) main.getReg().getJornada().getSelectedItem();
+            String lugarNacimiento = (String) main.getReg().getLugarNacimiento().getSelectedItem();
+           
+            
+            
+            
+            // Crear un objeto Estudiantes con los valores obtenidos
+            Estudiantes estudiante = new Estudiantes(usuario, documento, correo, genero, programa, jornada, lugarNacimiento);
+
+            
+            // Registrar el estudiante utilizando el método registrarEstudiante de Crud
+            crud.registrarEstudiante(estudiante);
+            
+            // Ocultar el panel de registro
+            main.getReg().setVisible(false);
 			
 			break;
 			
@@ -76,6 +107,7 @@ public class Controller implements ActionListener {
 			main.getReg().setVisible(false);
 			main.getVen().setVisible(true);
 			break;
+		
 		
 	}
 	}

@@ -2,7 +2,7 @@ package co.edu.unbosque.model;
 
 public class Estudiantes {
 	private String usuario;
-	private int documento;
+	private String documento;
 	private String correoAlternativo;
 	private String genero;
 	private String programaAcademico;
@@ -16,8 +16,8 @@ public class Estudiantes {
 
 
 
-public Estudiantes(String usuario, int documento, String correoAlternativo, String genero, String programaAcademico,
-			String jornadaAcademica, String lugarNacimiento, int fechaRegistro, boolean perfilActivado) {
+public Estudiantes(String usuario, String documento, String correoAlternativo, String genero, String programaAcademico,
+			String jornadaAcademica, String lugarNacimiento) {
 		super();
 		this.usuario = usuario;
 		this.documento = documento;
@@ -41,12 +41,12 @@ public void setUsuario(String usuario) {
 }
 
 
-public int getDocumento() {
+public String getDocumento() {
 	return documento;
 }
 
 
-public void setDocumento(int documento) {
+public void setDocumento(String documento) {
 	this.documento = documento;
 }
 

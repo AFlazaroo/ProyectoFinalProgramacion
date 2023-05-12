@@ -30,6 +30,7 @@ public class PanelRegistrarse extends JPanel{
 	
 	
 	
+	
 	private JButton btnRegistrarsePanel;
 	private JButton btnAtrasPanel;
 	
@@ -106,18 +107,30 @@ public class PanelRegistrarse extends JPanel{
 		
 		genero = new JComboBox();
 		genero.setBounds(275, 150, 117, 18);
+		genero.addItem("Masculino");
+		genero.addItem("Femenino");
+		
 		add(genero);
 		
 		programa = new JComboBox();
 		programa.setBounds(275, 179, 117, 18);
+		programa.addItem("Sistemas");
+		programa.addItem("Ambiental");
+		programa.addItem("Bioingenieria");
+		programa.addItem("Electronica");
+		programa.addItem("Industrial");
 		add(programa);
 		
 		jornada = new JComboBox();
 		jornada.setBounds(275, 209, 117, 18);
+		jornada.addItem("Diurno");
+		jornada.addItem("Nocturno");
 		add(jornada);
 		
 		lugarNacimiento = new JComboBox();
 		lugarNacimiento.setBounds(275, 238, 117, 18);
+		lugarNacimiento.addItem("Nacional");
+		lugarNacimiento.addItem("Internacional");
 		add(lugarNacimiento);
 		
 		btnRegistrarsePanel = new JButton("Registrarse");
