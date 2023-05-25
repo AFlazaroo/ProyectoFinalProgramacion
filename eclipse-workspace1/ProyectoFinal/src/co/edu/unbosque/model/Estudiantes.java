@@ -105,7 +105,7 @@ public class Estudiantes implements Serializable {
 
     @Override
     public String toString() {
-        return "Estudiantes [usuario=" + usuario + ", documento=" + documento + ", correoAlternativo=" + correoAlternativo
+        return "Estudiantes [usuario=" + documento + ", documento=" + usuario  + ", correoAlternativo=" + correoAlternativo
             + ", genero=" + genero + ", programaAcademico=" + programaAcademico + ", jornadaAcademica="
             + jornadaAcademica + ", lugarNacimiento=" + lugarNacimiento + ", fechaRegistro=" + fechaRegistro + "]";
     }

@@ -14,7 +14,7 @@ public class EstudiantesDTO1 {
     public EstudiantesDTO1(){
         estudiantes = new ArrayList<Estudiantes>();
         archivoB = new ArchivoBinario();
-        crud = new CrudBinario(archivoB);
+        crud = new CrudBinario(archivoB, estudiantes);
         estudiantes = archivoB.leerArchivo();
     }
 

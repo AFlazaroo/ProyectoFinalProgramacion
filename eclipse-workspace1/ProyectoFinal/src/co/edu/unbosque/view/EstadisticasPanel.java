@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.io.File;
 import java.io.FileReader;
@@ -7,6 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,26 +22,22 @@ import co.edu.unbosque.model.Estudiantes;
 import co.edu.unbosque.model.Archivos.Archivo;
 import co.edu.unbosque.model.Archivos.ArchivoBinario;
 
-
-
 public class EstadisticasPanel extends JPanel{
-
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	
 	private JLabel filtradoL;
 	private JLabel opcionL;
+	private JLabel fondoLabel;
+	
+	private JButton bVerEsta;
 	
 	private JComboBox filtrado;
 	private JComboBox opciones;
-	private JLabel fondoLabel;
-	private ImageIcon fondoIcon;
+	
+	private ImageIcon fondoIcon;	
 	private Archivo archivo;
 	private ArchivoBinario archivoB;
-	
-	
 	private JTextArea datos;
 	
 	
@@ -52,18 +50,12 @@ public class EstadisticasPanel extends JPanel{
 		try {
 			initialize();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		setVisible(false);
 	}
-
-
-
 	private void initialize() throws IOException {
-	
-	
 		setFont(new Font("Tahoma", Font.PLAIN, 11));
 		setBounds(100, 100, 450, 300);
 		
@@ -85,6 +77,11 @@ public class EstadisticasPanel extends JPanel{
 		opcionL.setBounds(140, 105, 97, 22);
 		add(opcionL);
 		
+		bVerEsta = new JButton("ACCIONAR");
+		bVerEsta.setFont(new Font("Arial Black", Font.PLAIN, 14));
+		bVerEsta.setBounds(115, 220, 200, 25);
+		add(bVerEsta);
+		
 		opciones = new JComboBox();
 		opciones.setBounds(54, 145, 297, 22);
 		opciones.addItem("Informacion completa facultad de ingenieria");
@@ -93,8 +90,7 @@ public class EstadisticasPanel extends JPanel{
 		opciones.addItem("Dar de baja a estudiante del sistemas");
 		opciones.addItem("Mostrar informacion ascendentemente o desendentemente");
 		add(opciones);
-		
-		
+	
 		datos = new JTextArea();
 		datos.setFont(new Font("Arial Black", Font.PLAIN, 14));
 		datos.setBounds(20,250,400,100);
@@ -113,9 +109,7 @@ public class EstadisticasPanel extends JPanel{
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        
-        
+        } 
         archivoB = new ArchivoBinario();
 		List<Estudiantes> estudiantes = archivoB.leerArchivo();
       
@@ -123,7 +117,6 @@ public class EstadisticasPanel extends JPanel{
 		    datos.append(estudiante.toString() + "\n");
 		}
        
-		
         fondoLabel = new JLabel("");
         fondoLabel.setIcon(new ImageIcon(EstadisticasPanel.class.getResource("/co/edu/unbosque/view/Lanita.jpg")));
         fondoLabel.setFont(new Font("Arial Black", Font.PLAIN, 10));
@@ -132,13 +125,7 @@ public class EstadisticasPanel extends JPanel{
         fondoLabel.setBounds(0, 0, 444, 365);
 		add(fondoLabel);
 		
-		
-	
-	
-
 		}
-
-
 
 	public JLabel getFiltradoL() {
 		return filtradoL;
@@ -238,6 +225,18 @@ public class EstadisticasPanel extends JPanel{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public JButton getbVerEsta() {
+		return bVerEsta;
+	}
+	public void setbVerEsta(JButton bVerEsta) {
+		this.bVerEsta = bVerEsta;
+	}
+	public ArchivoBinario getArchivoB() {
+		return archivoB;
+	}
+	public void setArchivoB(ArchivoBinario archivoB) {
+		this.archivoB = archivoB;
 	}
 	
 	}

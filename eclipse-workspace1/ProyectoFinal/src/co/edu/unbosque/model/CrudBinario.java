@@ -6,10 +6,13 @@ import co.edu.unbosque.model.Archivos.ArchivoBinario;
 
 public class CrudBinario {
 	private ArchivoBinario archivoB;
+	
+    private ArrayList<Estudiantes> estudiantes; 
 
 
-    public CrudBinario(ArchivoBinario archivoB) {
+    public CrudBinario(ArchivoBinario archivoB, ArrayList<Estudiantes> estudiantes) {
     	this.archivoB = archivoB;
+    	this.estudiantes = estudiantes;
     	
     }	
     	
@@ -37,9 +40,9 @@ public class CrudBinario {
 
         return encontrada;
     }
-    public boolean eliminarEstudiante(String usuario, ArrayList<Estudiantes> estudiantes) {
-        Estudiantes encontrado = buscarEstudiantes(usuario, estudiantes);
-        
+    public boolean eliminarEstudiante(String usuario1, ArrayList<Estudiantes> estudiantes) {
+        Estudiantes encontrado = buscarEstudiantes(usuario1, estudiantes);
+        buscarEstudiantes(usuario1, estudiantes);
         if (encontrado != null) {
             estudiantes.remove(encontrado);
             archivoB.escribirArchivo();
